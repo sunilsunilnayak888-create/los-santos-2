@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@400;700;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.25rem;
+    --background: 0.09 0.015 240;
+    --foreground: 0.82 0.02 230;
+    --card: 0.12 0.02 240;
+    --card-foreground: 0.82 0.02 230;
+    --popover: 0.11 0.02 240;
+    --popover-foreground: 0.82 0.02 230;
+    --primary: 0.72 0.12 200;
+    --primary-foreground: 0.05 0.01 240;
+    --secondary: 0.16 0.02 240;
+    --secondary-foreground: 0.82 0.02 230;
+    --muted: 0.15 0.015 240;
+    --muted-foreground: 0.55 0.02 230;
+    --accent: 0.72 0.12 200;
+    --accent-foreground: 0.05 0.01 240;
+    --destructive: 0.6 0.18 25;
+    --destructive-foreground: 0.98 0 0;
+    --border: 0.22 0.02 240;
+    --input: 0.18 0.02 240;
+    --ring: 0.72 0.12 200;
+    --chart-1: 0.72 0.12 200;
+    --chart-2: 0.75 0.18 140;
+    --chart-3: 0.82 0.14 80;
+    --chart-4: 0.6 0.18 25;
+    --chart-5: 0.7 0.18 145;
+    --sidebar: 0.12 0.02 240;
+    --sidebar-foreground: 0.82 0.02 230;
+    --sidebar-primary: 0.72 0.12 200;
+    --sidebar-primary-foreground: 0.05 0.01 240;
+    --sidebar-accent: 0.16 0.02 240;
+    --sidebar-accent-foreground: 0.82 0.02 230;
+    --sidebar-border: 0.22 0.02 240;
+    --sidebar-ring: 0.72 0.12 200;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Rajdhani", sans-serif;
+    overflow: hidden;
+  }
+}
+
+.font-game {
+  font-family: "Orbitron", monospace;
+}
+
+.font-ui {
+  font-family: "Rajdhani", sans-serif;
+}
+
+@keyframes pulse-neon {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes float-up {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-60px);
+    opacity: 0;
+  }
+}
+
+.animate-float-up {
+  animation: float-up 2s ease-out forwards;
+}
+
+.hud-panel {
+  background: rgba(5, 8, 16, 0.85);
+  border: 1px solid rgba(39, 198, 216, 0.3);
+  backdrop-filter: blur(4px);
+}
